@@ -1,6 +1,5 @@
-import { Card } from './components/Card';
 import { Layout } from './components/Layout';
-import { LoginCard } from './components/LoginCard/LoginCard';
+import { LoginCard } from './components/LoginCard.style';
 
 function App() {
   const cardInfo = [

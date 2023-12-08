@@ -1,10 +1,8 @@
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-  }
+import styled from 'styled-components'
 
 
-.header {
+const StyledHeader = styled.div`
+
     background: linear-gradient(to right, rgb(138, 43, 226), rgb(0, 153, 255));
     width: auto;
     height: 50px;
@@ -13,16 +11,11 @@ body, h1, h2, h3, p, ul, li {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
 
-.headerTitle {
-    color: white;
-    vertical-align: middle;
-    
-}
+`
 
-.logoDiv {
+const LogoDiv = styled.div`
+
     background: linear-gradient(to right, rgb(138, 43, 226), rgb(0, 153, 255));
     width: 200px;
     height: 30px;
@@ -32,4 +25,24 @@ body, h1, h2, h3, p, ul, li {
     display: flex;
     align-items: center;
     justify-content: center;
+
+`
+
+const HeaderTitle = styled.h3`
+    color: white;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+`
+
+export const Header = () => {
+    return(
+        
+        <StyledHeader>
+            <div>
+                <HeaderTitle>VS_Banking</HeaderTitle>
+            </div>
+        </StyledHeader>
+
+    )
 }
