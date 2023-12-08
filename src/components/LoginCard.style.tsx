@@ -1,7 +1,7 @@
-import style from 'styled-components'
+import styled from 'styled-components'
 
 
-const LoginContainer = style.div`
+const LoginContainer = styled.div`
 
     background-color: rgb(220, 218, 218);
     width: 700px;
@@ -11,17 +11,17 @@ const LoginContainer = style.div`
     border-radius: 20px;
 `
 
-const TextoH1 = style.h1`
+const TextoH1 = styled.h1`
     color: white;
     margin-bottom: 50px;
 `
 
-const TextoP = style.p`
+const TextoP = styled.p`
     color: white;
     margin-bottom: 50px;
 `
 
-const LoginInput = style.input`
+const LoginInput = styled.input`
 
     border-radius: 20px;
     border-color: rgb(0, 153, 255);
@@ -33,7 +33,7 @@ const LoginInput = style.input`
     width: 300px;
 
 `
-const LoginButton = style.input`
+const LoginButton = styled.input`
 
     width: 400px;
     margin: 15px;
@@ -44,7 +44,7 @@ const LoginButton = style.input`
 
 `
 
-const ContainerHyperLink = style.a`
+const ContainerHyperLink = styled.a`
 
     margin: 10px;
 
