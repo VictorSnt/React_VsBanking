@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Card } from './components/Card';
+import { Layout } from './components/Layout';
+import { LoginCard } from './components/LoginCard/LoginCard';
 
 function App() {
+  const cardInfo = [
+    { id: 1, technology: 'TYPESCRIPT', use: 'frontend e backend' },
+    { id: 2, technology: 'HTML', use: 'frontend' },
+    { id: 3, technology: 'SQL', use: 'banco de dados' },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      {/* {cardInfo.map((object) => (
+        <Card 
+          id={object.id}
+          resume={object.technology}
+          details={object.use}
+        />
+      ))} */}
+      <LoginCard />
+    </Layout>
   );
 }
 
 export default App;
+
