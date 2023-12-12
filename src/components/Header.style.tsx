@@ -5,9 +5,9 @@ const StyledHeader = styled.div`
 
     background-color: rgb(43, 43, 43);
     width: auto;
-    height: 50px;
+    height: 100px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@ const HeaderTitle = styled.h3`
     vertical-align: middle;
     margin: 0;
     padding: 0;
-    font-size: 30px;
+    font-size: 40px;
 `
 
 export const Header = () => {
