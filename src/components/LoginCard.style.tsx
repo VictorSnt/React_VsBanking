@@ -1,4 +1,45 @@
 import styled, {keyframes} from 'styled-components'
+import { useState } from 'react';
+import { login } from '../services/login';
+
+
+export const LoginCard = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    return (
+        <LoginContainer>
+            <form action="" method="get">
+                <TextoH1>Ja é um cliente <LogoColorSpan>VS ?</LogoColorSpan></TextoH1>
+                <LoginInput 
+                    value={email} onChange={(event) => {
+                        setEmail(event.target.value)
+                    }} 
+                    id='emailInput' type='email' 
+                    placeholder='Endereço de email ou cpf' 
+                />
+                <LoginInput 
+                    value={password} onChange={(event) => {
+                        setPassword(event.target.value)
+                        console.log(password)
+                    }} 
+                    id='passwordInput' 
+                    type='password' 
+                    placeholder='Senha' 
+                />
+                <LoginButton 
+                    onClick={() => login(email, password)}
+                    type='submit' 
+                    value='Entrar' 
+                />
+                <div>
+                    <ContainerHyperLink href="#">Esqueci minha senha</ContainerHyperLink>
+                    <ContainerHyperLink href="#">Criar minha conta</ContainerHyperLink>
+                </div>
+            </form>
+        </LoginContainer>
+    )
+}
+
 
 const LoginContainer = styled.div`
     background-color: rgb(0, 0, 0);
@@ -97,19 +138,4 @@ const LogoColorSpan = styled.span`
     color: transparent;
 `
 
-export const LoginCard = () => {
-    return (
-        <LoginContainer>
-            <form action="" method="get">
-                <TextoH1>Ja é um cliente <LogoColorSpan>VS ?</LogoColorSpan></TextoH1>
-                <LoginInput id='emailInput' type='email' placeholder='Endereço de email ou cpf' />
-                <LoginInput id='passwordInput' type='password' placeholder='Senha' />
-                <LoginButton type='submit' value='Entrar' />
-                <div>
-                    <ContainerHyperLink href="#">Esqueci minha senha</ContainerHyperLink>
-                    <ContainerHyperLink href="#">Criar minha conta</ContainerHyperLink>
-                </div>
-            </form>
-        </LoginContainer>
-    )
-}
+
